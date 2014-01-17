@@ -1,4 +1,7 @@
 dist
+.dist*
+.project
+.settings/*
 cabal-dev
 *.o
 *.hi
