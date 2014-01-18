@@ -1,5 +1,5 @@
 name:                Dish
-version:             0.0.0.3
+version:             0.0.0.4
 homepage:            http://github.com/zcourts/Dish
 license:             BSD3
 license-file:        LICENSE
@@ -11,6 +11,8 @@ cabal-version:       >=1.8
 description:         A group of Hash related utilities (currently wraps MurmurHash3 C implementation)
 synopsis:            Hash modules (currently Murmur3)
 extra-source-files:  cbits/murmur3.c, cbits/murmur3.h
+stability:           Stable
+copyright:           Courtney Robinson
 
 source-repository head
   type:      git
