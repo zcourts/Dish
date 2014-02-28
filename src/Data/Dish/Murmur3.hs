@@ -155,7 +155,9 @@ murmur3Raw val seed ver = do
   let strLength = strLFromCStr val'
   outPtr <- mallocArray arrSize
   doHash ver cstr strLength (fromIntegral seed) outPtr
-  peekArray arrSize outPtr
+  result <- peekArray arrSize outPtr
+  free outPtr
+  return result
   where arrSize = 4
         strFromCStr :: CStringLen -> CString
         strFromCStr = fst
