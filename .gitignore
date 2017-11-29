@@ -8,3 +8,5 @@ cabal-dev
 *.chi
 *.chs.h
 .virthualenv
+.stack-work/
+.stack-root/
