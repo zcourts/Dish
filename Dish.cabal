@@ -1,5 +1,5 @@
 name:                Dish
-version:             0.0.0.5
+version:             0.0.0.6
 homepage:            http://github.com/zcourts/Dish
 license:             BSD3
 license-file:        LICENSE
@@ -19,24 +19,23 @@ source-repository head
   location:  https://github.com/zcourts/Dish.git
 
 library
-  build-depends:    
-                    base >= 4.6.0,
-                    bytestring >= 0.10.0
+  build-depends:
+                    base >= 4.6.0 && <= 4.10.0.0,
+                    bytestring >= 0.10.0 && <= 0.10.8.2
   hs-source-dirs:   src, examples
   c-sources:        cbits/murmur3.c
   include-dirs:     cbits
-  extra-libraries:    
+  extra-libraries:
   extensions:       ForeignFunctionInterface
-  other-modules:      
+  other-modules:
   exposed-modules:  Data.Dish.Murmur3
 
 executable Dish
   build-depends:   base >= 4,
                    bytestring >= 0.10.0,
-                   Dish >= 0.0.0.5
+                   Dish
   hs-source-dirs:  examples
   ghc-options:     -Wall -rtsopts
   c-sources:        cbits/murmur3.c
   include-dirs:     cbits
   main-is:         Main.hs
-
